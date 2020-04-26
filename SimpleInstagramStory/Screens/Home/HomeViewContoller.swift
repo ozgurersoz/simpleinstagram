@@ -15,16 +15,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private var viewModel: HomeViewModelLogic?
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
-        print("nib")
-    }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
-        print("required")
     }
     
     func setup() {

@@ -48,7 +48,6 @@ class StoryRepository {
                         DataCache.instance.write(data: data!, forKey: content.contentId)
                         self.contentDictionary[content.contentId]?(true)
                         self.contentDictionary[content.contentId] = nil
-                        print("download done")
                     }
                 }.resume()
             }
