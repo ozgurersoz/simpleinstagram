@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rmg-Wm-zRX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stories Collection View Controller-->
+        <scene sceneID="nsF-nU-QI3">
+            <objects>
+                <viewController storyboardIdentifier="StoriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1RU-De-kMH" customClass="StoriesCollectionViewController" customModule="SimpleInstagramStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kvw-CA-5Y3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="99F-OX-qXO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D0y-dh-b5I" customClass="AnimatedCollectionViewLayout" customModule="SimpleInstagramStory" customModuleProvider="target">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="StoryCollectionViewCell" id="v3C-Rb-0pc" customClass="StoryCollectionViewCell" customModule="SimpleInstagramStory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eAL-zn-D8U">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <viewLayoutGuide key="safeArea" id="KXc-4r-daG"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1RU-De-kMH" id="T6t-ca-jKa"/>
+                                    <outlet property="delegate" destination="1RU-De-kMH" id="RYX-Jj-5mJ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="99F-OX-qXO" firstAttribute="leading" secondItem="4L2-XE-iNB" secondAttribute="leading" id="MZq-NT-iD7"/>
+                            <constraint firstItem="99F-OX-qXO" firstAttribute="top" secondItem="4L2-XE-iNB" secondAttribute="top" id="PsI-o5-kZY"/>
+                            <constraint firstItem="4L2-XE-iNB" firstAttribute="trailing" secondItem="99F-OX-qXO" secondAttribute="trailing" id="hXe-oP-cQG"/>
+                            <constraint firstItem="4L2-XE-iNB" firstAttribute="bottom" secondItem="99F-OX-qXO" secondAttribute="bottom" id="jbt-Vd-VId"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4L2-XE-iNB"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="99F-OX-qXO" id="PbL-D0-BDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OD7-HT-gLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="134.59821428571428"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="bn4-uv-Wf3">
+            <objects>
+                <viewController id="Rmg-Wm-zRX" customClass="HomeViewController" customModule="SimpleInstagramStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fSO-hf-BDp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4C1-WW-kqW">
+                                <rect key="frame" x="10" y="64" width="394" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uID-mX-t5b"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E38-JJ-c5A">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCell" id="lZD-sp-qcO" customClass="HomeCell" customModule="SimpleInstagramStory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xen-1B-IO4">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlK-XW-1RS">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKJ-p2-YJY">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                </view>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yyw-PZ-O2S">
+                                                    <rect key="frame" x="35" y="35" width="30" height="30"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="VVe-vD-Gp9"/>
+                                                        <constraint firstAttribute="height" constant="30" id="qIA-Tb-fwY"/>
+                                                    </constraints>
+                                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="yyw-PZ-O2S" firstAttribute="centerX" secondItem="xen-1B-IO4" secondAttribute="centerX" id="0Do-SY-dnK"/>
+                                                <constraint firstAttribute="bottom" secondItem="xKJ-p2-YJY" secondAttribute="bottom" constant="10" id="2ZZ-lN-4aE"/>
+                                                <constraint firstAttribute="trailing" secondItem="tlK-XW-1RS" secondAttribute="trailing" constant="10" id="JJg-J2-rxD"/>
+                                                <constraint firstAttribute="bottom" secondItem="tlK-XW-1RS" secondAttribute="bottom" constant="10" id="NuJ-HS-iWn"/>
+                                                <constraint firstItem="xKJ-p2-YJY" firstAttribute="top" secondItem="xen-1B-IO4" secondAttribute="top" constant="10" id="Oec-Wj-8VY"/>
+                                                <constraint firstAttribute="trailing" secondItem="xKJ-p2-YJY" secondAttribute="trailing" constant="10" id="X9K-h6-xGB"/>
+                                                <constraint firstItem="xKJ-p2-YJY" firstAttribute="leading" secondItem="xen-1B-IO4" secondAttribute="leading" constant="10" id="ZMj-7K-q3Q"/>
+                                                <constraint firstItem="tlK-XW-1RS" firstAttribute="leading" secondItem="xen-1B-IO4" secondAttribute="leading" constant="10" id="ich-CL-Tpi"/>
+                                                <constraint firstItem="yyw-PZ-O2S" firstAttribute="centerY" secondItem="xen-1B-IO4" secondAttribute="centerY" id="oo3-Kn-1Mf"/>
+                                                <constraint firstItem="tlK-XW-1RS" firstAttribute="top" secondItem="xen-1B-IO4" secondAttribute="top" constant="10" id="pJi-zJ-Pzg"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="coverView" destination="xKJ-p2-YJY" id="yXd-9S-kIr"/>
+                                            <outlet property="indicator" destination="yyw-PZ-O2S" id="yX1-M5-9HP"/>
+                                            <outlet property="profileImage" destination="tlK-XW-1RS" id="TRB-qb-MWt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rmg-Wm-zRX" id="m1x-qr-86g"/>
+                                    <outlet property="delegate" destination="Rmg-Wm-zRX" id="ZCK-La-nUu"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4C1-WW-kqW" firstAttribute="leading" secondItem="mp7-vD-J5Y" secondAttribute="leading" constant="10" id="bjx-ey-hRy"/>
+                            <constraint firstItem="mp7-vD-J5Y" firstAttribute="trailing" secondItem="4C1-WW-kqW" secondAttribute="trailing" constant="10" id="hug-Cx-Lqx"/>
+                            <constraint firstItem="4C1-WW-kqW" firstAttribute="top" secondItem="mp7-vD-J5Y" secondAttribute="top" constant="20" id="sR4-wK-Lo5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mp7-vD-J5Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4C1-WW-kqW" id="bSE-Hd-6Ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKx-nu-IH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
